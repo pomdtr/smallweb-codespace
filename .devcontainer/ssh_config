@@ -1,3 +1,4 @@
 Host server
     HostName <hostname>
     User <user>
+    StrictHostKeyChecking no
