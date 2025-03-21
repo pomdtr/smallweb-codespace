@@ -1,5 +1,7 @@
 # Smallweb Codespace
 
+![screenshot](./screenshot.jpg)
+
 ## Usage
 
 1. Fork this repository
