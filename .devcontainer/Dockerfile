@@ -10,3 +10,4 @@ RUN eget --to=${INSTALL_DIR} mutagen-io/mutagen
 RUN eget --to=${INSTALL_DIR} pomdtr/smallweb
 RUN eget --to=${INSTALL_DIR} --asset=deno- denoland/deno
 RUN eget --to=${INSTALL_DIR} --asset=.tar.gz cli/cli
+RUN eget --to=${INSTALL_DIR} --asset=^json getsops/sops
