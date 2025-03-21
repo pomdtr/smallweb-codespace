@@ -2,7 +2,7 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "Create Sync",
+            "label": "Create Mutagen Sync",
             "type": "shell",
             "command": [
                 "mutagen",

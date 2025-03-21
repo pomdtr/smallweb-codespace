@@ -10,4 +10,5 @@
 1. Add the public key to the `authorized_keys` file on the server
 1. (optional) Set the `SOPS_AGE_KEY` secret if you want to use `sops` to encrypt secrets
 1. Update the `.devcontainer/ssh_config` file with the server's details
-1. Run the `Create Sync` command to sync the workspace with the server
+2. Run `ssh-keyscan <server-ip-or-host> >> ~/.ssh/known_hosts` to pre-fetch the host key of your server
+1. Run the `Create Mutagen Sync` command to sync the workspace with the server
