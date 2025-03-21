@@ -7,6 +7,9 @@
 		"dockerfile": "Dockerfile"
 	},
 	"remoteUser": "vscode",
+	"remoteEnv": {
+		"EDITOR": "code --wait"
+	},
 	"postCreateCommand": "./.devcontainer/init.sh",
 	"customizations": {
 		"vscode": {
