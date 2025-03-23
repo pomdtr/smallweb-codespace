@@ -8,7 +8,11 @@
 	},
 	"remoteUser": "vscode",
 	"remoteEnv": {
-		"EDITOR": "code --wait"
+		"EDITOR": "code --wait",
+		"SSH_REMOTE_HOSTNAME": "162.55.213.87",
+		"SSH_REMOTE_PORT": "2222",
+		"SSH_REMOTE_USER": "pomdtr",
+		"SSH_REMOTE_PATH": "/home/pomdtr/smallweb"
 	},
 	"postCreateCommand": "./.devcontainer/init.sh",
 	"customizations": {
