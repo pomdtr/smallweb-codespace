@@ -15,6 +15,7 @@
 		"SSH_REMOTE_PATH": "/home/pomdtr/smallweb"
 	},
 	"postCreateCommand": "./.devcontainer/init.sh",
+	"postAttachCommand": "mutagen sync start",
 	"customizations": {
 		"vscode": {
 			"extensions": [

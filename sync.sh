@@ -1,7 +1,7 @@
 #!/bin/sh
 
-if [ -z "$SSH_REMOTE_HOST" ]; then
-  echo "SSH_REMOTE_HOST is not set" > /dev/stderr
+if [ -z "$SSH_REMOTE_HOSTNAME" ]; then
+  echo "SSH_REMOTE_HOSTNAME is not set" > /dev/stderr
   exit 1
 fi
 
@@ -10,8 +10,8 @@ if [ -z "$SSH_REMOTE_PORT" ]; then
   exit 1
 fi
 
-if [ -z "$SSH_REMOTE_USERNAME" ]; then
-  echo "SSH_REMOTE_USERNAME is not set" > /dev/stderr
+if [ -z "$SSH_REMOTE_USER" ]; then
+  echo "SSH_REMOTE_USER is not set" > /dev/stderr
   exit 1
 fi
 
@@ -20,12 +20,10 @@ if [ -z "$SSH_REMOTE_PATH" ]; then
   exit 1
 fi
 
-SSH_REMOTE=$SSH_REMOTE_USERNAME@$SSH_REMOTE_HOST:$SSH_REMOTE_PORT
-MUTAGEN_ALPHA=$SSH_REMOTE:$SSH_REMOTE_PATH
-
+SSH_REMOTE=$SSH_REMOTE_USER@$SSH_REMOTE_HOSTNAME:$SSH_REMOTE_PORT
 mutagen sync create \
     --name=smallweb \
     --ignore=node_modules \
     --ignore-vcs \
     --mode=two-way-resolved \
-    $MUTAGEN_ALPHA ./smallweb
+    $SSH_REMOTE:$SSH_REMOTE_PATH ./smallweb
