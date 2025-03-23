@@ -1,7 +1,12 @@
 #!/bin/bash
 
 if [ -z "$SSH_PRIVATE_KEY" ]; then
-  echo "SSH_PRIVATE_KEY is not set"
+  echo "SSH_PRIVATE_KEY is not set" > /dev/stderr
+  exit 1
+fi
+
+if [ -z "$SSH_REMOTE_HOST" ]; then
+  echo "SSH_REMOTE_HOST is not set" > /dev/stderr
   exit 1
 fi
 

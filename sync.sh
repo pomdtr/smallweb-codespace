@@ -1,22 +1,22 @@
 #!/bin/sh
 
 if [ -z "$SSH_REMOTE_HOST" ]; then
-  echo "SSH_REMOTE_HOST is not set"
+  echo "SSH_REMOTE_HOST is not set" > /dev/stderr
   exit 1
 fi
 
 if [ -z "$SSH_REMOTE_PORT" ]; then
-  echo "SSH_REMOTE_PORT is not set"
+  echo "SSH_REMOTE_PORT is not set" > /dev/stderr
   exit 1
 fi
 
 if [ -z "$SSH_REMOTE_USERNAME" ]; then
-  echo "SSH_REMOTE_USERNAME is not set"
+  echo "SSH_REMOTE_USERNAME is not set" > /dev/stderr
   exit 1
 fi
 
 if [ -z "$SSH_REMOTE_PATH" ]; then
-  echo "SSH_REMOTE_PATH is not set"
+  echo "SSH_REMOTE_PATH is not set" > /dev/stderr
   exit 1
 fi
 
